@@ -284,4 +284,15 @@ int main(void)
 ~~~
 
 
+faça uma agenda de contatos com menu e as seguintes operações
+1. inserir
+2. remover
+3. alterar
+4. listar todos
+5. listar filtrando por parte do nome ou telefone
+6. sair
+
+na agenda cada contato tem nome e telefone somente.
+
+
 

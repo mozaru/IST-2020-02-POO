@@ -1,0 +1,31 @@
+faça um programa de votação do representante da turma
+onde podemos cadastrar os alunos e o os representantes (candidatos)
+
+para o alunos temos os seguintes dados
+  nome, cpf, email
+
+para os candidatos temos:
+  numero, nome da chapa, nome do candidato
+
+o programa deve permitir
+
+1. inserir, remover, alterar os dados de um aluno     (ate iniciar a votacao)
+2. inserir, remover, alterar os dados de um candidato (ate iniciar a votacao)
+3. iniciar e encerrar votacao
+4. realizar votacao
+   I. pede-se o CPF do aluno, verifica se ele existe e se nao votou ainda
+   II. mostra o nome do aluno e solicita-se o numero do candidato
+   III. mostra-se os dados do candidato e solicita a confirmação
+   IV. confirmando deve-se voltar ao passo I, e nao confirmando voltar ao passo II
+
+5. mostrar resultado da eleição, ordenado descrescentemente os candidatos pelo quantidade de votos.
+
+obs: ao iniciar a votação deve-se mostrar a zerésima.
+     que é o mostrar o resultado, para comprovar que todos os candidatos 
+     estão com zero votos.
+
+
+
+
+
+ 

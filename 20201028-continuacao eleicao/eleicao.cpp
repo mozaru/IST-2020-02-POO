@@ -1,6 +1,7 @@
 #include"eleicao.h"
 
 #include <iostream>
+#include <iomanip>
 
 #include "candidatos.h"
 #include "eleitores.h"
@@ -32,13 +33,20 @@ void Eleicao::votar(string cpf, int numero)
 
 void Eleicao::listarResultado(){
     candidatos.ordenar();
-    for(int i=0; i< candidatos.obterQtd(); i++)
+    cout << setw(4) << "#" << " " << setw(4) << "Num." << " "  << setw(30) << left << "Nome" << " " << setw(20) << "CHAPA" << " " << setw(5) << right << "VOTOS " << endl;
+    for(int i=0;i<67;i++)
+        cout << '-';
+    cout << endl;
+    for (int i=0;i<candidatos.obterQtd();i++)
     {
         Candidato c = candidatos.obterCandidato(i);
-        cout << (i+1) << " - " << 
-                c.getNumero() << "\t" << 
-                c.getNome() << "\t" << 
-                c.getChapa() << "\t" << 
-                c.getVotos() << endl; 
+        cout << setw(4) << (i+1) << " " << 
+                setw(4) << c.getNumero() << " " << 
+                setw(30) << left << c.getNome() << " " << 
+                setw(20) << c.getChapa() << " " << 
+                setw(5) << right << c.getVotos() << endl;
     }
+    for(int i=0;i<67;i++)
+        cout << '-';
+    cout << endl;
 }

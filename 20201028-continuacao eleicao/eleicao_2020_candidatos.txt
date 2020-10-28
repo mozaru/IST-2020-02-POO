@@ -1,4 +1,5 @@
-12    Crivella                       sei la            0
-13    Benedita                       PT                0
-1   candidato 1                    um                 0
-2   candidato 2                    dois               0
+  12 Crivella                       sei la               0 
+  13 Benedita                       PT                   0
+   1 candidato 1                    um                   0
+   2 candidato 2                    dois                 0
+  11 teste                          teste                0

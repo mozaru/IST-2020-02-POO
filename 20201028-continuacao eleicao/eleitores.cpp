@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <string>
 using namespace std;
 
@@ -53,7 +54,6 @@ int Eleitores::obterIndice(string cpf)
     int i=0;
     while (!achou && i<qtd)
     {
-      cout << "[" << cpf << "]" << "   [" << V[i].getCPF() << "]" << endl;
       if (cpf == V[i].getCPF())
         achou = true;
       else
@@ -89,11 +89,19 @@ void Eleitores::alterar(string cpf, Eleitor e)
 void Eleitores::listar()
 {
    int i=0;
-   cout << "Nome" << " " << "CPF" << " " << "EMAIL" << " " << "VOTOU" << endl;
+   cout << setw(4) << "#" << " " << setw(30) << left << "Nome" << " " << setw(20) << "CPF" << " " << setw(50) << "EMAIL" << " " << setw(5) << "VOTOU" << right << endl;
+   for(i=0;i<113;i++)
+    cout << '-';
+   cout << endl;
+
    for (i=0;i<qtd;i++)
    {
       Eleitor e = V[i];
-      cout << e.getNome() << " " << e.getCPF() << " " << e.getEmail() << " " << e.getVotou() << endl;
+      cout <<setw(4) << i << " " << setw(30) << left <<  e.getNome() << " " << setw(20) << e.getCPF() << " " << setw(50) << e.getEmail() << " " << (e.getVotou()?" Sim ":" Nao ") << right << endl;
    }
+
+   for(i=0;i<113;i++)
+    cout << '-';
+   cout << endl;
 }
 

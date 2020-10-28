@@ -85,7 +85,7 @@ void ArqTextoC::gravarCandidatos(string nomeArq)
         for (int i=0; i<conj->getCandidatos().obterQtd(); i++)
         {
             Candidato c = conj->getCandidatos().obterCandidato(i);
-            fprintf(arq, "%d %-30s %-20s %d\n", c.getNumero(), c.getNome().c_str(), c.getChapa().c_str(), c.getVotos());
+            fprintf(arq, "%4d %-30s %-20s %4d\n", c.getNumero(), c.getNome().c_str(), c.getChapa().c_str(), c.getVotos());
         }    
         fclose(arq);
     }

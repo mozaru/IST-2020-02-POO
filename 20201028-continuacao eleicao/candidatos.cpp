@@ -1,6 +1,7 @@
 #include "candidatos.h"
 #include<string>
 #include<iostream>
+#include<iomanip>
 #include<bits/stdc++.h> 
 
 using namespace std;
@@ -115,22 +116,28 @@ int Candidatos::obterIndice(int numero){
     return achou?i:-1;
 }
 
-bool comp(Candidato &a, Candidato &b){
-    return a.getVotos() < b.getVotos();
+bool comp(Candidato a, Candidato b){
+    return a.getVotos() > b.getVotos();
 }
 
 void Candidatos::ordenar()
 {
-    //sort(vet, qtd, comp);
+    sort(vet, vet+qtd, comp);
 }
 
 void Candidatos::listar()
 {
    int i=0;
-   cout << "Numero" << " " << "Nome" << " " << "CHAPA" << " " << "VOTOS" << endl;
+   cout << setw(4) << "#" << " " << setw(4) << "Num." << " "  << setw(30) << left << "Nome" << " " << setw(20) << "CHAPA" << " " << setw(5) << right << "VOTOS " << endl;
+   for(i=0;i<67;i++)
+    cout << '-';
+   cout << endl;
    for (i=0;i<qtd;i++)
    {
       Candidato c = vet[i];
-      cout << c.getNumero() << " " << c.getNome() << " " << c.getChapa() << " " << c.getVotos() << endl;
+      cout << setw(4) << i << " " << setw(4) << c.getNumero() << " " << setw(30) << left << c.getNome() << " " << setw(20) << c.getChapa() << " " << setw(5) <<  right << c.getVotos() << endl;
    }
+   for(i=0;i<67;i++)
+    cout << '-';
+   cout << endl;
 }

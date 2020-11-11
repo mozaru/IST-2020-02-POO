@@ -1,0 +1,98 @@
+Exercicio 1
+
+Fazer um programa de historico academico
+O programa serve para gerenciar o seu historico academico
+com o programa deve ser possivel realizar as seguintes tarefas
+
+1. Inserir uma disciplina
+2. Remover uma disciplina dado o codigo
+3. Alterar os dados de uma disciplina
+4. listar todas as disciplinas
+5. ver historico
+   lista nome, credios, semetre, ano e media (para cada disciplina)
+   no final mostrar o CR (coeficiente de rendimento)
+
+Dados da disciplina
+  codigo: inteiro
+  nome: string
+  creditos: inteiro
+  semestre: inteiro
+  ano: inteiro
+  nota1, nota2: real
+  professor: string
+
+media: (nota1+nota2)/2
+
+
+
+Exercicio 2
+
+no programa anterior adicinar dois novos tipo de disciplina
+
+tipo 1 -> eh a do exercicio 1
+  codigo: inteiro
+  nome: string
+  creditos: inteiro
+  semestre: inteiro
+  ano: inteiro
+  nota1, nota2: real
+  professor: string
+
+media: (nota1+nota2)/2
+
+tipo 2 ->
+  codigo: inteiro
+  nome: string
+  creditos: inteiro
+  semestre: inteiro
+  ano: inteiro
+  nota1, nota2: real
+  professor: string
+
+media: (nota1+2*nota2)/3 
+
+tipo 3 ->
+  codigo: inteiro
+  nome: string
+  creditos: inteiro
+  semestre: inteiro
+  ano: inteiro
+  nota_ap, nota_doc, nota_exec : real
+  professor: string
+
+media: (2*nota_ap + 3*nota_doc + 5*nota_exec)/10 
+
+
+criar a hierarquia
+
+                disc_base  <----------------------------  0:n   historico
+                   codigo: inteiro
+		   nome: string
+		   creditos: inteiro
+		   semestre: inteiro
+		   ano: inteiro
+  		   professor: string
+                   ler(): void <<virtual>>
+                   media(): float <<abstract>> 
+                   getCodigo(): int
+	           getNome():string
+        	   getCreditos(): int
+                   getSemestre(): int
+                   getAno(): int
+                    ^                                            
+                    |
+   +----------------+--------------+
+   |                               |
+ disc1				 disc3
+   nota1, nota2: real               nota_ap, nota_doc, nota_exec : real
+   ler(): void                      ler(): void
+   media(): float <<virtual>>       media(): float
+   ^                                           
+   |
+ disc2
+   media(): float
+
+                                                    disc_base *x;
+                                                     ....
+                                                    x->ler(); 
+                                                    x->media(); 

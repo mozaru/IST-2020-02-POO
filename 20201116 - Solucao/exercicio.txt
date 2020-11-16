@@ -1,4 +1,4 @@
-Exercicio de Hoje
+Exercicio 1
 
 Fazer um programa de historico academico
 O programa serve para gerenciar o seu historico academico
@@ -24,9 +24,10 @@ Dados da disciplina
 media: (nota1+nota2)/2
 
 
+
 Exercicio 2
 
-no programa anterior adicinar dois novos tipo de disciplina
+no programa anterior adicionar dois novos tipo de disciplina
 
 tipo 1 -> eh a do exercicio 1
   codigo: inteiro
@@ -95,6 +96,3 @@ criar a hierarquia
                                                      ....
                                                     x->ler(); 
                                                     x->media(); 
-
-
-

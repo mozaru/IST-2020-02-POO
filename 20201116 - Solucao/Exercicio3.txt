@@ -1,0 +1,18 @@
+Faça um programa para ler n formas geometrica (no maximo 100)
+e no final o programa deve listar o nome e a area de cada forma geometrica lida
+
+as formas geometricas podem ser:
+
+1. quadrado
+   lado: real
+   area = lado * lado
+
+2. retangulo
+   base e altura: real
+   area = base * altura
+
+3. circulo
+   raio: real
+   area = 3.1415*raio*raio
+
+   

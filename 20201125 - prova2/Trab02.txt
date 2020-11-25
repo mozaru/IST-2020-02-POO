@@ -1,0 +1,67 @@
+Trabalho 2 de POO
+
+Regras:
+   1 - enviar o trabalho por email para mozar.silva@gmail.com
+   2 - assunto do email "TRAB IST 2020 02 POO", sem as aspas mas com os espacos
+   3 - nao será aceito trabalho depois do prazo
+   4 - prazo de entrega 09-dez-2020 23:59
+   5 - grupo de no maximo 3 pessoas (no maximo, entao pode fazer sozinho)
+   6 - no corpo do email deve-se ter o nome completo de todos os participantes
+   7 - zipar todos os arquivos .cpp e enviar (somente os arquivos fontes, ou seja, .h e .cpp) nome_arquivo.zip
+   8 - criar uma pasta para cada exercicio contendo os .h e os .cpp  
+   9 - o nome das pastas deve ser o "exDD", trocar o DD para o numero da questao com zero na frente se necessário
+   10- todo o codigo fonte será analisado, juntamente com a qualidade do codigo e comparado com os dos colegas
+       para rankear e pontuar.
+   11- Exercicios iguais serão anulados 
+       Se o mesmo exercicio for igual ou equivalente em dois ou mais grupos
+         o exercicio será descartado para os grupos envolvidos tendo sua nota zerada, no exercicio.
+   12- Se mais de 3 exercicios forem iguais nos grupos a nota tirada será dividida pelo numero de grupos.
+   13- Se mais de 3 pessoas participarem de um grupo, será assumido que são dois grupos e logo terão a nota
+         dividida uma vez que todos os exercicios são iguais (neste caso especifico os exercicios nao serão zerados).
+   14- Em todos os exercicios usar classes, caso nao use o exercicio será descartando tendo sua nota zerado
+
+Exercicios: Em todos os exercicios use classes
+
+1-(2.5) Fazer uma agenda de contatos, onde deve ser possivel realizar as seguintes operacoes:
+  1. inserir um contato
+  2. remover um contato dado o email
+  3. listar todos os contatos
+  4. listar os contatos dado parte do nome, email ou telefone.
+
+Cada contato tem: Nome, email e telefone
+os dados da agenda nao podem estar em vetores, devem estar em alguma estrutura dinamica (lista, pilha ou fila)
+precisa usar arquivo (texto ou binario - usar fstream) no inicio do programa se o arquivo existir este deve ser lido e no final deve ser gravado (ref: aula-2020-11-04-Eleicao-parte 4 - arqTxt.c).
+
+
+2-(3.5) Faça um programa de cadastro de locadora, onde seja possivel realizar as seguintes operações:
+    a) incluir um produto
+    b) remover um produto pelo codigo
+    c) mostrar os dados de um produto pelo codigo
+    d) listar todos os produtos (codigo, descricao e valor do aluguel)
+    e) mostrar o valor do aluguel dado o codigo
+
+os produtos podem ser: 
+     DVD: codigo, titulo(descricao),  categoria (lancamento, catalogo ou Raridade)
+		Aluguel: Lancamento - 5.50
+                         Catalogo   - 4.00
+                         Raridade   - 7.00
+     Cartucho: codigo, nome (descricao), numero de jogadores e estilo (acao, terror, fps, rgp, roque-like, etc...)
+                      Aluguel : 3.00
+
+obs: crie as classes: 
+              Locadora   : que contem os produtos e as operações de a ate  e
+              Produto    : classe abstrata que padroniza os produtos
+              DVD        : herda de Produto
+              Cartucho   : herda de Produto
+
+   
+3-(2.0) Fazer o jogo da velha para 2 dois jogadores
+
+4-(2.0) Fazer um programa que leia dois conjuntos de numeros reais A e B (no maximo 100), na sequencia mostre
+   I - a uniao dos conjuntos A U B
+  II - a intersecção entre os conjuntos A e B
+ III - a diferença A - B
+	
+obs: conjuntos nao tem elementos repetidos, logo isso deve ser garantido em todas as operacoes
+     os dados dos conjuntos nao podem estar em vetores, devem estar em alguma estrutura dinamica (lista, pilha ou fila)
+        
